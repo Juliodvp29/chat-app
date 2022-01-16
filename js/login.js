@@ -7,7 +7,7 @@ const errorText = form.querySelector(".error-txt");
 continueBtn.addEventListener("click", (e) => {
     e.preventDefault();
     // ajax request
-    console.log("err: "+errorText);
+    //console.log("err: "+errorText);
 
     let xhr = new XMLHttpRequest(); // create a new request object
     xhr.open("POST", "./server/login.php", true); // open the request
