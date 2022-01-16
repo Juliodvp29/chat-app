@@ -23,6 +23,7 @@ sendBtn.onclick = () => {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         inputField.value = ""; //once message inserted into database then leave blank the the input field
+        scrollToBottom();
       }
     } //2:17:43
   }
@@ -30,6 +31,14 @@ sendBtn.onclick = () => {
   let formData = new FormData(form);
   xhr.send(formData); // send the request
 };
+
+chatBox.onmouseenter = () => {
+  chatBox.classList.add("active")
+}
+
+chatBox.onmouseleave = () => {
+  chatBox.classList.remove("active")
+}
 
 setInterval(() => {
   let xhr = new XMLHttpRequest(); // create a new request object
@@ -52,5 +61,8 @@ setInterval(() => {
 
 function scrollToBottom(){
     chatBox.scrollTop = chatBox.scrollHeight;
+
   }
+
+
   

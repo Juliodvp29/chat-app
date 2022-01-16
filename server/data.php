@@ -17,6 +17,11 @@ while ($row = mysqli_fetch_assoc($sql)) {
     ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
     ($outgoing_id == $row['unique_id']) ? $hid_me = "hide" : $hid_me = "";
 
+
+    //check user is online or offline
+
+    ($row['status'] == "Offline now") ? $offline = "offline" : $offline = "";
+
     $output .= '<a href="chat.php?user_id=' . $row['unique_id'] . '">
         <div class="content">
         <img src="server/images/'.$row['img'].'" alt="">
