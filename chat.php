@@ -21,7 +21,7 @@ if(!isset($_SESSION['unique_id'])){
                 <img src="server/images/<?php echo $row['img'];?>" alt="" alt="">
                 <div class="details">
                     <span><?php echo $row['fname'] . "  " . $row['lname'];?></span>
-                    <p><?php echo $row['status']; ?></p>
+                    <p class="sta"><?php echo $row['status']; ?></p>
                 </div>
             </header>
             <div class="chat-box">
